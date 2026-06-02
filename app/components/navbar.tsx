@@ -4,10 +4,10 @@ import { cn } from "../lib/utils";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/other", label: "Tech" },
-  { href: "/other", label: "Language" },
-  { href: "/other", label: "Music" },
-  { href: "/other", label: "Writing" }
+  { href: "/tech", label: "Tech" },
+  { href: "/language", label: "Language" },
+  { href: "/music", label: "Music" },
+  { href: "/writing", label: "Writing" }
 ];
 
 export function Navbar() {
