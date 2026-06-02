@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router";
 import { cn } from "../lib/utils";
 
-const navLinks = [
+export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/tech", label: "Tech" },
   { href: "/language", label: "Language" },
@@ -13,7 +13,7 @@ export function Navbar() {
   const location = useLocation();
 
   return (
-    <nav className="flex justify-center items-center gap-6 h-14">
+    <nav className="hidden md:flex justify-center items-center gap-6 h-14">
       {navLinks.map((link) => {
         const isActive = location.pathname === link.href;
 
