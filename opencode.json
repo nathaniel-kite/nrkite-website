@@ -10,5 +10,18 @@
       ],
       "enabled": true
     }
+  },
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "git diff": "allow",
+      "grep *": "allow",
+      "head *": "allow",
+      "tail *": "allow"
+    },
+    "edit": {
+      "*": "ask",
+      "openspec/*": "allow"
+    }
   }
 }
