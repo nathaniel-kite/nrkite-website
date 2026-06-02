@@ -17,7 +17,10 @@
       "git diff": "allow",
       "grep *": "allow",
       "head *": "allow",
-      "tail *": "allow"
+      "tail *": "allow",
+      "ls*": "allow",
+      "npx openspec *": "allow",
+      "openspec *": "allow"
     },
     "edit": {
       "*": "ask",
