@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource-variable/noto-sans": "^5.2.10",
+    "@fontsource-variable/noto-serif": "^5.2.9",
     "@phosphor-icons/react": "^2.1.10",
     "@react-router/node": "7.16.0",
     "@react-router/serve": "7.16.0",

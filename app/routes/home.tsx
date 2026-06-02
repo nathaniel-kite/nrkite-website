@@ -10,7 +10,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <div className="container mx-auto py-12 px-4">
-      <h1 className="text-3xl font-bold mb-4">Linguistic Typology</h1>
+      <h1 className="text-3xl font-heading font-bold mb-4">Linguistic Typology</h1>
       <div className="space-y-6 text-muted-foreground">
         <p>
           Linguistic typology is a subfield of linguistics that deals with the structural
@@ -21,7 +21,7 @@ export default function Home() {
           accidental from what is necessary in the architecture of human language.
         </p>
 
-        <h2 className="text-2xl font-semibold text-foreground">Word Order Typology</h2>
+        <h2 className="text-2xl font-heading font-semibold text-foreground">Word Order Typology</h2>
         <p>
           One of the most fundamental classifications in linguistic typology concerns the
           basic order of constituents in a sentence. The most widely studied parameter is
@@ -63,7 +63,7 @@ export default function Home() {
           disputed.
         </p>
 
-        <h2 className="text-2xl font-semibold text-foreground">Morphological Typology</h2>
+        <h2 className="text-2xl font-heading font-semibold text-foreground">Morphological Typology</h2>
         <p>
           Morphological typology classifies languages based on how words are formed and how
           morphemes combine. The traditional classification, dating back to the early
@@ -106,7 +106,7 @@ export default function Home() {
           effectively expressing what would require an entire sentence in English.
         </p>
 
-        <h2 className="text-2xl font-semibold text-foreground">Head-Directionality Parameter</h2>
+        <h2 className="text-2xl font-heading font-semibold text-foreground">Head-Directionality Parameter</h2>
         <p>
           The head-directionality parameter concerns whether the head of a phrase precedes
           or follows its dependents. This parameter manifests across multiple syntactic
@@ -137,7 +137,7 @@ export default function Home() {
           governing the organization of syntactic structures.
         </p>
 
-        <h2 className="text-2xl font-semibold text-foreground">Case Systems</h2>
+        <h2 className="text-2xl font-heading font-semibold text-foreground">Case Systems</h2>
         <p>
           Languages vary dramatically in how they mark the grammatical relationships between
           nouns and other elements in the clause. Case systems are one of the primary
@@ -178,7 +178,7 @@ export default function Home() {
           space.
         </p>
 
-        <h2 className="text-2xl font-semibold text-foreground">Tonal Systems</h2>
+        <h2 className="text-2xl font-heading font-semibold text-foreground">Tonal Systems</h2>
         <p>
           Tone is a phonological feature in which pitch distinctions between syllables or
           words can change lexical or grammatical meaning. The typological distribution of
@@ -203,7 +203,7 @@ export default function Home() {
           distinctions are lost.
         </p>
 
-        <h2 className="text-2xl font-semibold text-foreground">Grammatical Gender and Noun Classes</h2>
+        <h2 className="text-2xl font-heading font-semibold text-foreground">Grammatical Gender and Noun Classes</h2>
         <p>
           Languages vary enormously in how they classify nouns. Some languages have no
           grammatical gender at all, while others have elaborate systems with dozens of
@@ -227,7 +227,7 @@ export default function Home() {
           analysis.
         </p>
 
-        <h2 className="text-2xl font-semibold text-foreground">Implicational Universals</h2>
+        <h2 className="text-2xl font-heading font-semibold text-foreground">Implicational Universals</h2>
         <p>
           One of the most powerful tools in linguistic typology is the implicational
           universal, a statement of the form "if a language has property X, then it also
@@ -253,7 +253,7 @@ export default function Home() {
           constrained by universal cognitive and communicative pressures.
         </p>
 
-        <h2 className="text-2xl font-semibold text-foreground">Conclusion</h2>
+        <h2 className="text-2xl font-heading font-semibold text-foreground">Conclusion</h2>
         <p>
           Linguistic typology provides a framework for understanding both the remarkable
           diversity and the underlying unity of human languages. By comparing languages

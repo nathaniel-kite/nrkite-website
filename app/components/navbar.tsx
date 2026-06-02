@@ -13,7 +13,7 @@ export function Navbar() {
   const location = useLocation();
 
   return (
-    <nav className="flex justify-center items-center gap-4 h-14">
+    <nav className="flex justify-center items-center gap-6 h-14">
       {navLinks.map((link) => {
         const isActive = location.pathname === link.href;
 
@@ -22,7 +22,7 @@ export function Navbar() {
             key={link.href}
             to={link.href}
             className={cn(
-              "text-gray-200 text-sm font-medium transition-colors hover:text-white/80",
+              "text-gray-200 text-sm font-heading font-medium transition-colors hover:text-white/80",
               isActive && "font-bold text-white"
             )}
           >
