@@ -23,7 +23,7 @@ export function Navbar() {
             to={link.href}
             className={cn(
               "text-gray-200 text-sm font-heading font-medium transition-colors hover:text-white/80",
-              isActive && "font-bold text-white"
+              isActive && "font-bold text-white hover:text-white"
             )}
           >
             {link.label}
