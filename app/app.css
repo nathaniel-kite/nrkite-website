@@ -110,7 +110,7 @@ body {
   --primary: oklch(0.424 0.199 265.638);
   --primary-foreground: oklch(0.97 0.014 254.604);
   --secondary: oklch(0.274 0.006 286.033);
-  --secondary-foreground: oklch(0.985 0 0);
+  --secondary-foreground: oklch(84.498% 0.00776 61.088);
   --muted: oklch(0.268 0.007 34.298);
   --muted-foreground: oklch(0.709 0.01 56.259);
   --accent: oklch(0.268 0.007 34.298);
@@ -143,5 +143,11 @@ body {
   }
   html {
     @apply font-sans;
+  }
+  button,
+  a,
+  [role="button"],
+  [role="link"] {
+    cursor: pointer;
   }
 }
