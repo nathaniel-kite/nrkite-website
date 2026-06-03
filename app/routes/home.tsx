@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import { Link } from "react-router"
+import { cn } from "../lib/utils";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -8,15 +9,35 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
+const gradients = [
+  { background: "radial-gradient(100% 100% at 0% 0%, rgb(32, 253, 235) 0%, #FFFFFF00 55%)",
+    classes: "h-[2000px] w-[150vw] layer-1000 top-0 left-0 ml-[-20vw]"
+  },
+  { background: "radial-gradient(100% 100% at 50% 0%, rgba(6, 143, 255, 0.71) 0%, #FFFFFF00 75%)",
+    classes: "h-[2000px] w-[200vw] layer-1200 top-0 center-0"
+  },
+  { background: "radial-gradient(100% 80% at 100% 0%, rgb(33, 235, 134) 10%, #FFFFFF00 80%)",
+    classes: "h-[1500px] w-[120vw] layer-800 top-0 right-0 mr-[-40vw]"
+  },
+  // { background: "radial-gradient(100% 50% at 50% 50%, rgb(6, 255, 209) 0%, #FFFFFF00 50%)",
+  //   classes: "h-[1800px] w-[100vw] layer-600 top-[0] right-0 mr-[-18vw]"
+  // }
+]
+
 export default function Home() {
 
   // TODO: Refactor this gradient to clean it up
   return (
     <div className="parallax">
-      <div className="layer layer-1000">
-        <div style={{height: "800px", overflow: "visible", display: "flex", alignItems: "flex-start", justifyContent: "center"}}>
-          <div style={{height: "2400px", width: "200vw", background: "radial-gradient(90% 80% at 0% 0%, #00E8FFFF 0%, #073AFF00 100%),radial-gradient(40% 60% at 100% 0%, #25BF64FF 0%, #073AFF00 100%),radial-gradient(50% 50% at 60% 30%, #91CE91C4 0%, #073AFF00 100%),radial-gradient(50% 50% at 100% 30%, #00FFE4C2 0%, #00FF8B00 100%),radial-gradient(40% 40% at 10% 30%, #00FF8BB0 0%, #21DD7000 100%)", padding: "100px", flexShrink: 0}}></div>
-        </div>
+      <div className="layer overflow-visible flex items-center justify-center">
+        {gradients.map((gradient) => {
+            return(
+              <div className={cn(`absolute overflow-visible ${gradient.classes}`)} style={{background: gradient.background}}></div>
+            )
+          })
+        }
+      </div>
+      <div className="h-[800px]">
       </div>
       <div className="layer layer-foreground">
         <div className="container mx-auto py-12 px-4">
@@ -38,3 +59,6 @@ export default function Home() {
     </div>
   );
 }
+
+//        <div style={{height: "2400px", width: "200vw", background: "radial-gradient(90% 80% at 0% 0%, #00E8FFFF 0%, #073AFF00 100%),radial-gradient(40% 60% at 100% 0%, #25BF64FF 0%, #073AFF00 100%),radial-gradient(50% 50% at 60% 30%, #91CE91C4 0%, #073AFF00 100%),radial-gradient(50% 50% at 100% 30%, #00FFE4C2 0%, #00FF8B00 100%),radial-gradient(40% 40% at 10% 30%, #00FF8BB0 0%, #21DD7000 100%)", padding: "100px", flexShrink: 0}}></div>
+

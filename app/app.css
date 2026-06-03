@@ -157,7 +157,7 @@ body {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  perspective: 1000px;
+  perspective: 3000px;
   perspective-origin: top;
 }
 
@@ -168,14 +168,6 @@ body {
 
 .layer-foreground {
   transform: translateZ(0);
-}
-
-.layer-200 {
-  transform: translateZ(-200px);
-}
-
-.layer-400 {
-  transform: translateZ(-400px);
 }
 
 .layer-600 {
@@ -192,4 +184,12 @@ body {
 
 .layer-1200 {
   transform: translateZ(-1200px);
+}
+
+.layer-1400 {
+  transform: translateZ(-1400px);
+}
+
+.layer-1600 {
+  transform: translateZ(-1600px);
 }
