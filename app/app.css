@@ -66,6 +66,7 @@ body {
 }
 
 :root {
+  --header-height: 3.5rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.147 0.004 49.25);
   --card: oklch(1 0 0);
@@ -150,4 +151,25 @@ body {
   [role="link"] {
     cursor: pointer;
   }
+}
+
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1000px;
+  perspective-origin: top;
+}
+
+.layer {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.layer-0 {
+  transform: translateZ(0);
+}
+
+.layer-1 {
+  transform: translateZ(-1000px);
 }

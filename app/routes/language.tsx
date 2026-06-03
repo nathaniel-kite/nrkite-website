@@ -9,7 +9,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Language() {
   return (
-    <div className="container mx-auto py-12 px-4">
+    <div className="container mx-auto py-12 px-4 mt-14">
       <h1 className="text-3xl font-heading font-bold mb-4">Linguistic Typology</h1>
       <div className="space-y-6 text-secondary-foreground">
         <p>
