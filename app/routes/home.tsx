@@ -15,7 +15,7 @@ export default function Home() {
     <div className="parallax">
       <div className="layer layer-1">
         <div style={{height: "800px", overflow: "visible", display: "flex", alignItems: "flex-start", justifyContent: "center"}}>
-          <div style={{height: "1600px", width: "200vw", background: "linear-gradient(135deg, #1e3a5f 0%, #0d9488 100%)", padding: "100px", flexShrink: 0}}></div>
+          <div style={{height: "2400px", width: "200vw", background: "linear-gradient(180deg, hsla(206, 93%, 57%, 1) 4%, hsla(196, 100%, 71%, 1) 39%, hsla(221, 68%, 52%, 1) 64%, hsla(224, 71%, 4%, 1) 87%)", padding: "100px", flexShrink: 0}}></div>
         </div>
       </div>
       <div className="layer layer-0">
@@ -31,7 +31,7 @@ export default function Home() {
             <p>
               If you're interested in working with me professionally, check out the <Link to="/tech">Tech</Link> page for my projects and CV.
             </p>
-            <div style={{height: "1600px", backgroundColor: "red"}}></div>
+            <div style={{height: "1600px", backgroundColor: "grey"}}></div>
           </div>
         </div>
       </div>
