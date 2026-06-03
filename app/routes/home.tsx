@@ -10,18 +10,15 @@ export function meta({}: Route.MetaArgs) {
 }
 
 const gradients = [
-  { background: "radial-gradient(100% 100% at 0% 0%, rgb(32, 253, 235) 0%, #FFFFFF00 55%)",
-    classes: "h-[2000px] w-[150vw] layer-1000 top-0 left-0 ml-[-20vw]"
+  { background: "radial-gradient(100% 100% at 0% 0%, rgb(32, 253, 235) 10%, #FFFFFF00 55%)",
+    classes: "h-[2400px] w-[150vw] layer-800 top-0 left-0 ml-[-20vw]"
   },
-  { background: "radial-gradient(100% 100% at 50% 0%, rgba(6, 143, 255, 0.71) 0%, #FFFFFF00 75%)",
-    classes: "h-[2000px] w-[200vw] layer-1200 top-0 center-0"
+  { background: "radial-gradient(100% 100% at 50% 0%, rgba(6, 143, 255, 0.93) 0%, #FFFFFF00 75%)",
+    classes: "h-[2400px] w-[200vw] layer-1600 top-0 center-0"
   },
   { background: "radial-gradient(100% 80% at 100% 0%, rgb(33, 235, 134) 10%, #FFFFFF00 80%)",
-    classes: "h-[1500px] w-[120vw] layer-800 top-0 right-0 mr-[-40vw]"
-  },
-  // { background: "radial-gradient(100% 50% at 50% 50%, rgb(6, 255, 209) 0%, #FFFFFF00 50%)",
-  //   classes: "h-[1800px] w-[100vw] layer-600 top-[0] right-0 mr-[-18vw]"
-  // }
+    classes: "h-[1800px] w-[120vw] layer-600 top-0 right-0 mr-[-40vw]"
+  }
 ]
 
 export default function Home() {
