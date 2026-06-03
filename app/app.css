@@ -99,6 +99,7 @@ body {
   --sidebar-accent-foreground: oklch(0.216 0.006 56.043);
   --sidebar-border: oklch(0.923 0.003 48.717);
   --sidebar-ring: oklch(0.709 0.01 56.259);
+  --hero-gradient-center: radial-gradient(100% 100% at 50% 0%, rgba(78, 231, 255, 0.93));
 }
 
 .dark {
@@ -133,6 +134,7 @@ body {
   --sidebar-accent-foreground: oklch(0.985 0.001 106.423);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.553 0.013 58.071);
+  --hero-gradient-center: radial-gradient(100% 100% at 50% 0%, rgba(6, 143, 255, 0.93));
 }
 
 @layer base {

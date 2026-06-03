@@ -23,7 +23,6 @@ const gradients = [
 
 export default function Home() {
 
-  // TODO: Refactor this gradient to clean it up
   return (
     <div className="parallax">
       <div className="layer overflow-visible flex items-center justify-center">
@@ -56,6 +55,3 @@ export default function Home() {
     </div>
   );
 }
-
-//        <div style={{height: "2400px", width: "200vw", background: "radial-gradient(90% 80% at 0% 0%, #00E8FFFF 0%, #073AFF00 100%),radial-gradient(40% 60% at 100% 0%, #25BF64FF 0%, #073AFF00 100%),radial-gradient(50% 50% at 60% 30%, #91CE91C4 0%, #073AFF00 100%),radial-gradient(50% 50% at 100% 30%, #00FFE4C2 0%, #00FF8B00 100%),radial-gradient(40% 40% at 10% 30%, #00FF8BB0 0%, #21DD7000 100%)", padding: "100px", flexShrink: 0}}></div>
-
