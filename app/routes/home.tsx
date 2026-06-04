@@ -1,7 +1,7 @@
 import type { Route } from "./+types/home";
 import { Link } from "react-router"
+import { GithubLogoIcon, LinkedinLogoIcon } from "@phosphor-icons/react"
 import { cn } from "../lib/utils";
-import { Card } from "~/components/ui/card";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -10,7 +10,7 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-const gradients = [,
+const gradients = [
   { background: "radial-gradient(100% 80% at 100% 0%, rgb(33, 235, 134) 10%, #FFFFFF00 80%)",
     classes: "h-[1800px] w-[120vw] layer-600 top-0 right-0 mr-[-30vw] mt-[-40vh]"
   },
@@ -18,7 +18,7 @@ const gradients = [,
     classes: "h-[2400px] w-[150vw] layer-800 top-0 left-0 ml-[-20vw] mt-[-40vh]"
   },
   { background: "radial-gradient(100% 100% at 50% 0%, rgba(6, 143, 255, 0.93) 0%, #FFFFFF00 75%)",
-    classes: "h-[2400px] w-[200vw] layer-1600 top-0 center-0 mt-[-40vh]"
+    classes: "h-[2400px] w-[200vw] layer-1600 top-0 mt-[-40vh]"
   }
 ]
 
@@ -37,7 +37,7 @@ export default function Home() {
       <div className="h-[700px] flex items-center justify-center layer-600">
         <div className="text-center">
           <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold whitespace-pre-line">Nathaniel Kite</h1>
-          <h2 className="font-heading text-2xl my-4 italic pl-3 text-align-center">alias Nate, Geckoarcher, <span className="not-italic">齊楠哲</span></h2>
+          <h2 className="font-heading text-2xl my-4 italic pl-3">alias Nate, Geckoarcher, <span className="not-italic">齊楠哲</span></h2>
         </div>
       </div>
       <div className="layer layer-foreground">
@@ -61,6 +61,14 @@ export default function Home() {
               <span className="font-bold text-foreground">As a linguist,</span> I speak English and Spanish (B2) and am learning Mandarin (A2). I have some formal education, but most of my
               experience comes from conlanging, which I do to support my homebrew TTRPG setting, Tengril. I'm knowledgeable in phonology and writing systems.
             </p>
+          </div>
+          <div className="flex gap-4 mt-8">
+            <a href="https://github.com/nathaniel-kite" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground hover:text-foreground transition-colors">
+              <GithubLogoIcon size={24} />
+            </a>
+            <a href="https://www.linkedin.com/in/nate-kite" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground hover:text-foreground transition-colors">
+              <LinkedinLogoIcon size={24} />
+            </a>
           </div>
         </div>
       </div>
