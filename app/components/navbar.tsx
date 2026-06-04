@@ -4,8 +4,8 @@ import { cn } from "../lib/utils";
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/tech", label: "Tech" },
-  { href: "/language", label: "Language" },
   { href: "/music", label: "Music" },
+  { href: "/language", label: "Language" },
   { href: "/writing", label: "Writing" }
 ];
 

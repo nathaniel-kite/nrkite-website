@@ -3,6 +3,7 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/noto-sans";
 @import "@fontsource-variable/noto-serif";
+@import "@fontsource-variable/noto-serif/standard-italic.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -159,8 +160,8 @@ body {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  perspective: 3000px;
-  perspective-origin: top;
+  perspective: 2500px;
+  perspective-origin: center;
 }
 
 .layer {
@@ -170,6 +171,14 @@ body {
 
 .layer-foreground {
   transform: translateZ(0);
+}
+
+.layer-200 {
+  transform: translateZ(-200px);
+}
+
+.layer-400 {
+  transform: translateZ(-400px);
 }
 
 .layer-600 {
