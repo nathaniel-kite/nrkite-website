@@ -55,12 +55,12 @@ export default function Home() {
           <h1 className="text-3xl font-heading font-bold mb-4">Welcome!</h1>
           <div className="space-y-6 text-secondary-foreground">
             <p>
-              Hello and welcome! I'm Nate; I'm a software engineer, musician, and conlanger based in Atlanta. This website is a way for me to show off my work, host content,
+              Hello and welcome! I'm Nate; I'm a software engineer, musician, and amateur linguist based in Atlanta. This website is a way for me to show off my work, host content,
               and post essays about the things that interest me.
             </p>
             <p>
-              <span className="font-bold text-foreground">As a software engineer,</span> I have experience in fullstack development, system architecture, data science, and extended reality.
-              I've developed cutting-edge computer vision applications, won competitive hackathons, and published research in ACM CSCW 2025. I currently work at Cisco, where
+              <span className="font-bold text-foreground">As a software engineer,</span> I have experience in fullstack development, system architecture, data science, and extended reality applications.
+              I've developed cutting-edge computer vision applications, won competitive hackathons, and published research in ACM CSCW. I currently work at Cisco, where
               I build CI/CD and Kubernetes infrastructure and develop AI applications.
             </p>
             <p>
@@ -70,6 +70,9 @@ export default function Home() {
             <p>
               <span className="font-bold text-foreground">As a linguist,</span> I speak English and Spanish (B2) and am learning Mandarin (A2). I have some formal education, but most of my
               experience comes from conlanging, which I do to support my homebrew TTRPG setting, Tengril. I specialize in phonology and writing systems.
+            </p>
+            <p>
+              I'm curious and passionate about what I do. If you're interested in any of these fields, don't hesistate to reach out!
             </p>
           </div>
           <div className="flex gap-4 mt-8">
