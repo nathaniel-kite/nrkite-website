@@ -35,23 +35,31 @@ export default function Home() {
         }
       </div>
       <div className="h-[700px] flex items-center justify-center layer-600">
-        <div className="mt-[-200px] ml-[-25vw]">
-          <h1 className="font-heading text-9xl font-bold whitespace-pre-line">Nathaniel Kite</h1>
-          <h2 className="font-heading text-2xl my-4 italic pl-3">alias Nate, Geckoarcher, <span className="not-italic">齊楠哲</span></h2>
+        <div className="text-center">
+          <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold whitespace-pre-line">Nathaniel Kite</h1>
+          <h2 className="font-heading text-2xl my-4 italic pl-3 text-align-center">alias Nate, Geckoarcher, <span className="not-italic">齊楠哲</span></h2>
         </div>
       </div>
       <div className="layer layer-foreground">
-        <div className="container mx-auto py-12 px-4">
+        <div className="container mx-auto py-12 px-4 max-w-xl">
           <h1 className="text-3xl font-heading font-bold mb-4">Welcome!</h1>
           <div className="space-y-6 text-secondary-foreground">
             <p>
-              Hello, and welcome to my website!
+              Hello and welcome! I'm Nate; I'm a software engineer, musician, and conlanger based in Atlanta. This website is a way for me to show off my work, host content,
+              and post essays about the things that interest me.
             </p>
             <p>
-              I'm Nate; I'm a software engineer, musician, and conlanger based in Atlanta. This website is a way for me to show off my work, host content, and post essays about the things that interest me.
+              <span className="font-bold text-foreground">As a software engineer,</span> I have experience in fullstack development, system architecture, data science, and extended reality.
+              I've developed cutting-edge computer vision applications, won competitive hackathons, and published research in ACM CSCW 2025. I currently work at Cisco, where
+              I build CI/CD and Kubernetes infrastructure and develop AI applications.
             </p>
             <p>
-              If you're interested in working with me professionally, check out the <Link to="/tech">Tech</Link> page for my projects and CV.
+              <span className="font-bold text-foreground">As a musician,</span> I've been performing for 14 years on clarinet and saxophone. I'm classically trained (including a minor in music
+              from the University of Georgia), and I have experience in jazz, klezmer, and Eastern European folk music. 
+            </p>
+            <p>
+              <span className="font-bold text-foreground">As a linguist,</span> I speak English and Spanish (B2) and am learning Mandarin (A2). I have some formal education, but most of my
+              experience comes from conlanging, which I do to support my homebrew TTRPG setting, Tengril. I'm knowledgeable in phonology and writing systems.
             </p>
           </div>
         </div>
