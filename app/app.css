@@ -204,3 +204,7 @@ body {
 .layer-1600 {
   transform: translateZ(-1600px);
 }
+
+.machinicide > span:nth-child(2) {
+  display: none;
+}

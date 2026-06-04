@@ -1,6 +1,15 @@
 import type { Route } from "./+types/home";
 import { Link } from "react-router"
-import { GithubLogoIcon, LinkedinLogoIcon } from "@phosphor-icons/react"
+import { GithubLogoIcon, LinkedinLogoIcon, EnvelopeIcon, X } from "@phosphor-icons/react"
+import { useState } from "react"
+import {
+  AlertDialog,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "~/components/ui/alert-dialog"
 import { cn } from "../lib/utils";
 
 export function meta({}: Route.MetaArgs) {
@@ -23,6 +32,7 @@ const gradients = [
 ]
 
 export default function Home() {
+  const [emailOpen, setEmailOpen] = useState(false);
 
   return (
     <div className="parallax">
@@ -59,10 +69,13 @@ export default function Home() {
             </p>
             <p>
               <span className="font-bold text-foreground">As a linguist,</span> I speak English and Spanish (B2) and am learning Mandarin (A2). I have some formal education, but most of my
-              experience comes from conlanging, which I do to support my homebrew TTRPG setting, Tengril. I'm knowledgeable in phonology and writing systems.
+              experience comes from conlanging, which I do to support my homebrew TTRPG setting, Tengril. I specialize in phonology and writing systems.
             </p>
           </div>
           <div className="flex gap-4 mt-8">
+            <button onClick={() => setEmailOpen(true)} className="text-secondary-foreground hover:text-foreground transition-colors cursor-pointer">
+              <EnvelopeIcon size={24} />
+            </button>
             <a href="https://github.com/nathaniel-kite" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground hover:text-foreground transition-colors">
               <GithubLogoIcon size={24} />
             </a>
@@ -72,6 +85,21 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <AlertDialog open={emailOpen} onOpenChange={setEmailOpen}>
+        <AlertDialogContent>
+          <AlertDialogCancel className="absolute top-3 right-3 p-1 h-auto w-auto border-0 hover:bg-muted">
+            <X size={16} />
+          </AlertDialogCancel>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Email</AlertDialogTitle>
+            <AlertDialogDescription>
+              <div className="machinicide">
+                n<span>athankite</span><span>.machinicide</span>@gmail.com
+              </div>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
