@@ -98,7 +98,7 @@ export default function Home() {
             <AlertDialogTitle>Email</AlertDialogTitle>
             <AlertDialogDescription>
               <div className="machinicide">
-                n<span>athankite</span><span>.machinicide</span>@gmail.com
+                nathan<span>kite</span><span>.machinicide</span>@gmail.com
               </div>
             </AlertDialogDescription>
           </AlertDialogHeader>
