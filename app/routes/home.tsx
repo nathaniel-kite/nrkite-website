@@ -47,7 +47,7 @@ export default function Home() {
       <div className="h-[700px] flex items-center justify-center layer-600">
         <div className="text-center">
           <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold whitespace-pre-line">Nathaniel Kite</h1>
-          <h2 className="font-heading text-2xl my-4 italic pl-3">alias Nate, Geckoarcher, <span className="not-italic">齊楠哲</span></h2>
+          <h2 className="font-heading text-2xl my-4 italic">alias Nate, Geckoarcher, <span className="not-italic">齊楠哲</span></h2>
         </div>
       </div>
       <div className="layer layer-foreground">
