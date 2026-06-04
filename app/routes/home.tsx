@@ -55,7 +55,7 @@ export default function Home() {
           <h1 className="text-3xl font-heading font-bold mb-4">Welcome!</h1>
           <div className="space-y-6 text-secondary-foreground">
             <p>
-              Hello and welcome! I'm Nate; I'm a software engineer, musician, and amateur linguist based in Atlanta. This website is a way for me to show off my work, host content,
+              Hello and welcome! I'm Nate; I'm a software engineer, musician, and amateur linguist based in Atlanta. This website is where I show off my work, host content,
               and post essays about the things that interest me.
             </p>
             <p>
@@ -63,6 +63,7 @@ export default function Home() {
               I've developed cutting-edge computer vision applications, won competitive hackathons, and published research in ACM CSCW. I currently work at Cisco, where
               I build CI/CD and Kubernetes infrastructure and develop AI applications.
             </p>
+            <p className="italic">If you're interested in working with me professionally, see the <Link key="/tech" to="/tech" className="underline text-primary">tech</Link> page for my CV.</p>
             <p>
               <span className="font-bold text-foreground">As a musician,</span> I've been performing for 14 years on clarinet and saxophone. I'm classically trained (including a minor in music
               from the University of Georgia), and I have experience in jazz, klezmer, and Eastern European folk music. 
