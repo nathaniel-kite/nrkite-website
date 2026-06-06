@@ -74,7 +74,7 @@ function LogoBadge({ initials, color }: { initials: string; color: string }) {
 }
 
 const ciscoShortDescription = <ul className="list-disc pl-4">
-    <li>Led modernization effort on 20+ repositories, including GitHub Actions, Kubernetes monitoring, and a shift trunk-based development</li>
+    <li>Led modernization effort on 20+ repositories, including GitHub Actions, Kubernetes monitoring, and a shift to trunk-based development</li>
     <li>Restructured Kubernetes secret management, patching over 100+ major security vulnerabilities</li>
     <li>Developed AI in-app support agent to reduce strain on ops team and improve usability</li>
   </ul>;
@@ -251,7 +251,7 @@ export default function Tech() {
               <h1 className="text-2xl font-heading font-semibold text-foreground">Nathaniel Kite</h1>
               <h1 className="text-sm text-muted-foreground">Software Engineer</h1>
             </div>
-            <Button variant="ghost" size="icon" className="text-muted-foreground/50 dark:text-muted-foreground/20 hover:text-foreground p-5" asChild aria-label="Download resume">
+            <Button variant="ghost" size="icon" className="text-muted-foreground/50 dark:text-muted-foreground/20 hover:text-foreground p-5 dark:hover:text-foreground p-5" asChild aria-label="Download resume">
               <a href="/docs/resumeSpring2026Final.pdf" download>
                 <FileArrowDownIcon weight="bold" className="size-7" />
               </a>
