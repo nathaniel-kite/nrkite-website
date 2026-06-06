@@ -9,7 +9,7 @@ import {
 } from "~/components/ui/card";
 import { Button } from "~/components/ui/button";
 import { Separator } from "~/components/ui/separator";
-import { FileArrowDownIcon } from "@phosphor-icons/react";
+import { FilePdfIcon } from "@phosphor-icons/react";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -160,7 +160,7 @@ const experience = [
       {pivotAgileShortDescription}
       <Separator className="mt-4"></Separator>
       <p className="italic mt-4">
-        This was a part-time internship which I took up after my original summer plans fell through. I built PivotAgile a Jira extension to track a variety of bespoke information which Jira doesn't calculate itself.
+        This was a part-time internship which I took up after my original summer plans fell through. I built PivotAgile a Jira extension to track a variety information which Jira doesn't calculate itself.
       </p>
       <p className="italic mt-4">
         The main takeaway was learning how to read documentation and work with a complicated API (both RESTful and Jira's bespoke extension-building tools).
@@ -174,7 +174,7 @@ const experience = [
 
 const researchShortDescription = <div>
     <p>Interviewed 40+ legal professionals to understand how AI is used and conceptualized within the legal field. Analyzed ethical impacts, opportunities for disruption, and limitations of existing institutions.</p>
-    <Button variant="outline" size="sm" asChild className="mt-4">
+    <Button size="sm" asChild className="mt-4">
       <a href="https://dl.acm.org/doi/10.1145/3757554" target="_blank" rel="noopener noreferrer">
         View
       </a>
@@ -191,7 +191,7 @@ const research = [
       {researchShortDescription}
       <Separator className="mt-4"></Separator>
       <p className="italic mt-4">
-        My wonderful research advisor, Dr. Ari Schlesinger (<a href="https://arischlesinger.com" className="underline text-primary" target="_blank">website</a>) brought me on to this project to assist with
+        My wonderful research advisor, Dr. Ari Schlesinger (<a href="https://arischlesinger.com" className="underline text-primary" target="_blank">website</a>), brought me on to this project to assist with
         literature review, interviewing, and analysis. It ended up being an amazing introduction to the world of academia; being able to comfortably read academic papers is very useful and a skill most people don't have.
       </p>
       <p className="italic mt-4">
@@ -253,7 +253,7 @@ export default function Tech() {
             </div>
             <Button variant="ghost" size="icon" className="text-muted-foreground/50 dark:text-muted-foreground/20 hover:text-foreground p-5 dark:hover:text-foreground p-5" asChild aria-label="Download resume">
               <a href="/docs/resumeSpring2026Final.pdf" download>
-                <FileArrowDownIcon weight="bold" className="size-7" />
+                <FilePdfIcon weight="bold" className="size-7" />
               </a>
             </Button>
           </div>
@@ -406,7 +406,7 @@ export default function Tech() {
                   </div>
                   {project.link && (
                     <div>
-                      <Button variant="outline" size="sm" asChild>
+                      <Button size="sm" asChild>
                         <a
                           href={project.link}
                           target={project.link.startsWith("http") ? "_blank" : undefined}
