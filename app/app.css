@@ -24,7 +24,7 @@ body {
 }
 
 @theme inline {
-  --font-heading: var(--font-serif);
+  --font-heading: var(--font-sans);
   --font-serif: 'Noto Serif Variable', serif;
   --font-sans: 'Noto Sans Variable', sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -102,23 +102,24 @@ body {
   --sidebar-border: oklch(0.923 0.003 48.717);
   --sidebar-ring: oklch(0.709 0.01 56.259);
   --hero-gradient-center: radial-gradient(100% 100% at 50% 0%, rgba(78, 231, 255, 0.93));
+  --page-gradient: radial-gradient(100% 80% at 50% 50%, rgb(29, 225, 255) 10%, #ffffff 50%);
   --selection-bg: oklch(76.116% 0.12561 238.659 / 0.635);
   --selection-text: oklch(0% 0 0);
 }
 
 .dark {
   --background: oklch(0.147 0.004 49.25);
-  --foreground: oklch(0.985 0.001 106.423);
-  --card: oklch(0.216 0.006 56.043);
+  --foreground: oklch(100% 0.00011 271.152);
+  --card: oklch(23.157% 0.0398 262.525);
   --card-foreground: oklch(0.985 0.001 106.423);
   --popover: oklch(0.216 0.006 56.043);
   --popover-foreground: oklch(0.985 0.001 106.423);
-  --primary: oklch(54.007% 0.21862 266.633);
-  --primary-foreground: oklch(0.97 0.014 254.604);
+  --primary: oklch(59.457% 0.21628 273.962);
+  --primary-foreground: oklch(93.179% 0.01271 255.644);
   --secondary: oklch(0.274 0.006 286.033);
-  --secondary-foreground: oklch(84.498% 0.00776 61.088);
-  --muted: oklch(0.268 0.007 34.298);
-  --muted-foreground: oklch(0.709 0.01 56.259);
+  --secondary-foreground: oklch(90.975% 0.0001 271.152);
+  --muted: oklch(27.19% 0.02955 284.259);
+  --muted-foreground: oklch(76.138% 0.02605 252.025);
   --accent: oklch(0.268 0.007 34.298);
   --accent-foreground: oklch(0.985 0.001 106.423);
   --destructive: oklch(0.704 0.191 22.216);
@@ -139,6 +140,7 @@ body {
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.553 0.013 58.071);
   --hero-gradient-center: radial-gradient(100% 100% at 50% 0%, rgba(6, 143, 255, 0.93));
+  --page-gradient: radial-gradient(100% 80% at 50% 50%, rgb(0, 73, 146) 10%, #030712 50%);
   --selection-bg: oklch(61.57% 0.16115 246.796 / 0.642);
   --selection-text: oklch(100% 0.00011 271.152);
 }
@@ -213,6 +215,14 @@ body {
 
 .layer-1600 {
   transform: translateZ(-1600px);
+}
+
+.layer-3000 {
+  transform: translateZ(-3000px);
+}
+
+.layer-5000 {
+  transform: translateZ(-5000px);
 }
 
 .machinicide > span:nth-child(2) {

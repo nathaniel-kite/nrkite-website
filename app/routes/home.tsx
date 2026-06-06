@@ -1,6 +1,6 @@
 import type { Route } from "./+types/home";
 import { Link } from "react-router"
-import { GithubLogoIcon, LinkedinLogoIcon, EnvelopeIcon, X } from "@phosphor-icons/react"
+import { GithubLogoIcon, LinkedinLogoIcon, EnvelopeIcon, X, XIcon } from "@phosphor-icons/react"
 import { useState } from "react"
 import {
   AlertDialog,
@@ -14,8 +14,8 @@ import { cn } from "../lib/utils";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Home | Nrkite" },
-    { name: "description", content: "Welcome to the Nrkite website." },
+    { title: "Home - nrkite.com" },
+    { name: "description", content: "Nate Kite's personal website." },
   ];
 }
 
@@ -55,22 +55,21 @@ export default function Home() {
           <h1 className="text-3xl font-heading font-bold mb-4">Welcome!</h1>
           <div className="space-y-6 text-secondary-foreground">
             <p>
-              Hello and welcome! I'm Nate; I'm a software engineer, musician, and amateur linguist based in Atlanta. This website is where I show off my work, host content,
-              and post essays about the things that interest me.
+              Hello and welcome! I'm Nate; I'm a software engineer, musician, and amateur linguist based in Atlanta.
             </p>
             <p>
               <span className="font-bold text-foreground">As a software engineer,</span> I have experience in fullstack development, system architecture, data science, and extended reality applications.
               I've developed cutting-edge computer vision applications, won competitive hackathons, and published research in ACM CSCW. I currently work at Cisco, where
               I build CI/CD and Kubernetes infrastructure and develop AI applications.
             </p>
-            <p className="italic">If you're interested in working with me professionally, see the <Link key="/tech" to="/tech" className="underline text-primary">tech</Link> page for my CV.</p>
+            <p className="italic">If you're interested in working with me professionally, see the <Link key="/tech" to="/tech" className="underline text-primary">tech</Link> page for my interactive CV.</p>
             <p>
               <span className="font-bold text-foreground">As a musician,</span> I've been performing for 14 years on clarinet and saxophone. I'm classically trained (including a minor in music
               from the University of Georgia), and I have experience in jazz, klezmer, and Eastern European folk music. 
             </p>
             <p>
-              <span className="font-bold text-foreground">As a linguist,</span> I speak English and Spanish (B2) and am learning Mandarin (A2). I have some formal education, but most of my
-              experience comes from conlanging, which I do to support my homebrew TTRPG setting, Tengril. I specialize in phonology and writing systems.
+              <span className="font-bold text-foreground">As a linguist,</span> I specialize in conlangs, phonology, and writing systems. I have some formal education, but most of my
+              experience comes from conlanging, which I do to support my homebrew TTRPG setting, Tengril. I speak English and Spanish (B2) and am learning Mandarin (A2). 
             </p>
             <p>
               I'm curious and passionate about what I do. If you're interested in any of these fields, don't hesistate to reach out!
@@ -91,8 +90,8 @@ export default function Home() {
       </div>
       <AlertDialog open={emailOpen} onOpenChange={setEmailOpen}>
         <AlertDialogContent>
-          <AlertDialogCancel className="absolute top-3 right-3 p-1 h-auto w-auto border-0 hover:bg-muted">
-            <X size={16} />
+          <AlertDialogCancel size="icon" className="absolute top-3 right-3 p-1 h-auto w-auto border-0 hover:bg-muted">
+            <XIcon size={16} />
           </AlertDialogCancel>
           <AlertDialogHeader>
             <AlertDialogTitle>Email</AlertDialogTitle>
