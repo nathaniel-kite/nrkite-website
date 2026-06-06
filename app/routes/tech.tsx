@@ -33,7 +33,7 @@ const education = [
     degree: "B.S. Computer Science; Minors in Music and Spanish; Certificate in Applied Data Science",
     year: "2021-2025",
     location: "Athens, GA",
-    shortDescription: <p className="">Magnum Cum Laude, UGA Presidential Scholar</p>,
+    shortDescription: <div>{ ugaShortDescription }</div>,
     fullDescription: <div>
       {ugaShortDescription}
       <p className="mt-3 italic font-bold">Relevant Coursework:</p>
@@ -248,7 +248,7 @@ export default function Tech() {
         <section className="mb-12">
           <div className="flex items-center justify-between mb-6">
             <div className="flex flex-col">
-              <h1 className="text-2xl font-heading font-semibold text-foreground">Nathaniel Kite</h1>
+              <h1 className="text-3xl font-heading font-semibold text-foreground">Nathaniel Kite</h1>
               <h1 className="text-sm text-muted-foreground">Software Engineer</h1>
             </div>
             <Button variant="ghost" size="icon" className="text-muted-foreground/50 dark:text-muted-foreground/20 hover:text-foreground p-5 dark:hover:text-foreground p-5" asChild aria-label="Download resume">
