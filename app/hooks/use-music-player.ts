@@ -41,7 +41,7 @@ export function useMusicPlayer({ song }: UseMusicPlayerProps): UseMusicPlayerRet
 
   useEffect(() => {
     const audio = new Audio(song.src);
-    audio.preload = "auto";
+    audio.preload = "none";
     audio.volume = 1;
 
     const onLoadedMetadata = () => setDuration(audio.duration);

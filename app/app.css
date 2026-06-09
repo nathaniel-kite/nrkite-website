@@ -24,6 +24,7 @@ body {
 }
 
 @theme inline {
+  --breakpoint-xs: 30rem;
   --font-heading: var(--font-sans);
   --font-serif: 'Noto Serif Variable', serif;
   --font-sans: 'Noto Sans Variable', sans-serif;

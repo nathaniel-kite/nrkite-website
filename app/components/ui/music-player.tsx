@@ -18,8 +18,8 @@ import type { Song } from "~/hooks/use-music-player";
 
 function getSpeakerIcon(volume: number) {
   if (volume === 0) return SpeakerXIcon;
-  if (volume <= 32) return SpeakerNoneIcon;
-  if (volume <= 65) return SpeakerLowIcon;
+  if (volume <= 10) return SpeakerNoneIcon;
+  if (volume <= 55) return SpeakerLowIcon;
   return SpeakerHighIcon;
 }
 
@@ -40,9 +40,9 @@ export default function MusicPlayer({ song, className }: { song: Song; className
   const SpeakerIcon = getSpeakerIcon(volume);
 
   return (
-    <div className={cn("w-full flex flex-col bg-popover border rounded-lg px-4 py-2 shadow shadow-muted-foreground/10", className)}>
+    <div className={cn("w-full flex flex-col", className)}>
       <div className="flex flex-col min-w-0">
-        <p className="text-lg font-semibold truncate">{song.name}</p>
+        <p className="text-lg font-semibold truncate !mb-0">{song.name}</p>
         <p className="text-sm text-muted-foreground truncate">
           {song.artists.join(", ")}
         </p>

@@ -24,7 +24,7 @@ export function meta({}: Route.MetaArgs) {
 
 // ---- Education ------------------------------------------------------------
 
-const ugaShortDescription = <p className="">Magnum Cum Laude, UGA Presidential Scholar</p>;
+const ugaShortDescription = <p className=""><span className="italic">Magna Cum Laude</span> (GPA 3.89), Zell Miler Scholarship, UGA Presidential Scholar</p>;
 
 const education = [
   {
@@ -74,13 +74,13 @@ function LogoBadge({ initials, color }: { initials: string; color: string }) {
 }
 
 const ciscoShortDescription = <ul className="list-disc pl-4">
-    <li>Led modernization effort on 20+ repositories, including GitHub Actions, Kubernetes monitoring, and a shift to trunk-based development</li>
-    <li>Restructured Kubernetes secret management, patching over 100+ major security vulnerabilities</li>
-    <li>Developed AI in-app support agent to reduce strain on ops team and improve usability</li>
+    <li>Reduce development delays by weeks by leading a CI/CD modernization effort — including GitHub Actions, Jenkins, release software cleanups, K8s health probes, trunk-based development, and security scans</li>
+    <li>Restructure Kubernetes secret management, patching over 100 major security vulnerabilities</li>
+    <li>Develop AI in-app support agent to achieve dramatic reduction in support incidents (Python, JavaScript)</li>
   </ul>;
 
 const gulfstreamShortDescription = <ul className="list-disc pl-4">
-    <li>Developed a cutting-edge system to quickly and precisely localize an AR application without fiducial markers</li>
+    <li>Developed a computer vision technique to quickly and precisely localize an AR application in real space</li>
     <li>Led a team of four, communicating with stakeholders, drawing roadmaps, and planning deliverables</li>
     <li>Researched advanced SLAM, localization, and computer vision algorithms</li>
     <li>Integrated state-of-the-art point cloud registration techniques using neural networks</li>
@@ -252,8 +252,8 @@ export default function Tech() {
               <h1 className="text-sm text-muted-foreground">Software Engineer</h1>
             </div>
             <Button variant="ghost" size="icon" className="text-muted-foreground/50 dark:text-muted-foreground/20 hover:text-foreground p-5 dark:hover:text-foreground p-5" asChild aria-label="Download resume">
-              <a href="/docs/resumeSpring2026Final.pdf" download>
-                <FilePdfIcon weight="bold" className="size-7" />
+              <a href="/docs/nathaniel-kite-resume.pdf" download>
+                <FilePdfIcon weight="regular" className="size-7" />
               </a>
             </Button>
           </div>
