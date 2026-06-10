@@ -179,7 +179,7 @@ const genres = [
       }
     ]
   },
-  { value: "caucasus", title: "Caucusus",
+  { value: "caucasus", title: "The Caucusus",
     preface: <div></div>,
     recs: [
       {
@@ -305,7 +305,7 @@ export default function Music() {
           can do it justice, but if you've ever poured your heart and soul into something greater than yourself, then surely you understand.
         </p>
         <p>
-          Clarinet is my first instrument, and I picked saxophone in high school for jazz band and pit ensemble. Around that time, I also started
+          Clarinet is my first instrument, and I picked up saxophone in high school for jazz band and pit ensemble. Around that time, I also started
           expanding my horizons into "world music" — first klezmer, then gradually into Eastern Europe, the Caucusus, and Central Asia. 
         </p>
         <Accordion type="single" collapsible className="border rounded-lg px-4 bg-card shadow shadow-secondary-foreground/10">
