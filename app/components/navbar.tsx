@@ -3,7 +3,7 @@ import { cn } from "../lib/utils";
 
 export const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/tech", label: "Tech" },
+  { href: "/career", label: "Career" },
   { href: "/music", label: "Music" },
   { href: "/language", label: "Liguistics" },
   { href: "/writing", label: "Writing" }

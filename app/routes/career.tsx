@@ -13,7 +13,7 @@ import { FilePdfIcon } from "@phosphor-icons/react";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Tech - nrkite.com" },
+    { title: "Career - nrkite.com" },
     {
       name: "description",
       content:
@@ -239,7 +239,7 @@ const projects = [
 // Page component
 // ---------------------------------------------------------------------------
 
-export default function Tech() {
+export default function Career() {
   return (
       <div className="container mx-auto py-12 px-4 mt-14 max-w-3xl">
         {/* ----------------------------------------------------------------- */}

@@ -62,7 +62,7 @@ export default function Home() {
               I've developed cutting-edge computer vision applications, won competitive hackathons, and published research in ACM CSCW. I currently work at Cisco, where
               I build CI/CD and Kubernetes infrastructure and develop AI applications.
             </p>
-            <p className="italic">If you're interested in working with me professionally, see the <Link key="/tech" to="/tech" className="underline text-primary">tech</Link> page for my interactive CV.</p>
+            <p className="italic">If you're interested in working with me professionally, see the <Link key="/career" to="/career" className="underline text-primary">career</Link> page for my interactive CV.</p>
             <p>
               <span className="font-bold text-foreground">As a musician,</span> I've been performing for 14 years on clarinet and saxophone. I'm classically trained (including a minor in music
               from the University of Georgia), and I have experience in jazz, klezmer, and Eastern European folk music. 
