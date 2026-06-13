@@ -10,7 +10,7 @@ import MusicPlayer from "~/components/ui/music-player";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Music Page | Nrkite" },
+    { title: "Music | Nate Kite" },
     { name: "description", content: "Music page for the Nrkite website." },
   ];
 }

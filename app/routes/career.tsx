@@ -13,7 +13,7 @@ import { FilePdfIcon } from "@phosphor-icons/react";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Career - nrkite.com" },
+    { title: "Career | Nate Kite" },
     {
       name: "description",
       content:
