@@ -76,7 +76,7 @@ function LogoBadge({ initials, color }: { initials: string; color: string }) {
 const ciscoShortDescription = <ul className="list-disc pl-4">
     <li>Reduce development delays by weeks by leading a CI/CD modernization effort — including GitHub Actions, Jenkins, release software cleanups, K8s health probes, trunk-based development, and security scans</li>
     <li>Restructure Kubernetes secret management, patching over 100 major security vulnerabilities</li>
-    <li>Develop AI in-app support agent to achieve dramatic reduction in support incidents (Python, JavaScript)</li>
+    <li>Develop AI in-app support agent to achieve dramatic reduction in support incidents</li>
   </ul>;
 
 const gulfstreamShortDescription = <ul className="list-disc pl-4">
@@ -220,9 +220,9 @@ const projects = [
     link: "https://devpost.com/software/globalink",
   },
   {
-    name: "Phonology Classifier",
+    name: "PHOIBLE Classifier",
     summary:
-      "Used random forest classifiers to classify langauges according to phonemic inventory; achieved accuracy of 68% on 150+ weak classes.",
+      "Used random forest classifiers to classify langauges by genetic relationship, according to phonemic inventory; achieved accuracy of 68% on 30 extremely weak classes.",
     tags: ["Python", "Scikit-learn", "Data Science"],
     link: "https://github.com/nathaniel-kite/inventory-classifier",
   },

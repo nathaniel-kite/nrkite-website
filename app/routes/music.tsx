@@ -123,7 +123,7 @@ const genres = [
         tradition: "Serbian (& Spanish)"
       },
       {
-        name: <span>Helikopter, Helikopter</span>,
+        name: <span>Helikopter</span>,
         author: <span>Fazlija</span>,
         link: "https://youtu.be/3ExGuHWdXCE?si=MrBU-Jg4xpCOcRox",
         tradition: "Bosnian"
