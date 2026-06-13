@@ -29,7 +29,7 @@ const poulenc = {
 
 const genres = [
   { value: "westernClassical", title: "Western Classical",
-    preface: <div className="italic mb-3">Apologies if you were hoping for deeper cuts.</div>,
+    preface: <div className="italic mb-3">WIP</div>,
     recs: [
       {
         name: <span>The Firebird</span>,
