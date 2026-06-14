@@ -11,7 +11,7 @@ import MusicPlayer from "~/components/ui/music-player";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Music | Nate Kite" },
-    { name: "description", content: "Music page for the Nrkite website." },
+    { name: "description", content: "My thoughts, experiences, and recommendations on music." },
   ];
 }
 

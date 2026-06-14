@@ -3,7 +3,7 @@ import type { Route } from "./+types/home";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Language | Nate Kite" },
-    { name: "description", content: "Language page for the Nrkite website." },
+    { name: "description", content: "My conlangs, linguistic projects, and recommended resources." },
   ];
 }
 

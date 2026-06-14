@@ -17,7 +17,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "Interactive CV including professional experience, research, and projects.",
+        "My interactive CV; experience, projects, and skills.",
     },
   ];
 }

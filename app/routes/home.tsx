@@ -15,7 +15,7 @@ import { cn } from "../lib/utils";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Home | Nate Kite" },
-    { name: "description", content: "Nate Kite's personal website." },
+    { name: "description", content: "Welcome to my personal website!" },
   ];
 }
 
