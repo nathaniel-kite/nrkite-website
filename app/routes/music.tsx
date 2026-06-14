@@ -29,18 +29,86 @@ const poulenc = {
 
 const genres = [
   { value: "westernClassical", title: "Western Classical",
-    preface: <div className="italic mb-3">WIP</div>,
+    preface: <div className="italic mb-3">
+      In an effort to keep this list short, I've mostly stuck to the classics. All of these are worth listening all the way through, but I've included
+      the best movements where I think some are particularly good!
+    </div>,
     recs: [
       {
         name: <span>The Firebird</span>,
         author: <span>Igor Stravinsky</span>,
-        link: "/"
+        link: "https://youtu.be/MHmk7yccvws?si=oHEehxASUAwpg1tv"
       },
       {
-        name: <span>Symphony 10, II. Allegro</span>,
+        name: <span className="italic">The Rite of Spring</span>,
+        author: <span>Igor Stravinsky</span>,
+        link: "https://youtu.be/rP42C-4zL3w?si=W5BAE7tdRm2UFz0u"
+      },
+      {
+        name: <span>Symphony No. 10, II. Allegro</span>,
         author: <span>Dimitri Shostakovich</span>,
-        link: "/"
-      }
+        link: "https://youtu.be/jxIUr-nD_vQ?si=FrMd2QCVxQN8b6zu&t=1287"
+      },
+      {
+        name: <span>String Quartet No. 8, II. Allegro Molto</span>,
+        author: <span>Dimitri Shostakovich</span>,
+        link: "https://youtu.be/-0nKJoZY64A?si=Dr7-wYhtMhHk4MIo&t=330"
+      },
+      {
+        name: <span>Jazz Suite No. 2, VI. Waltz</span>,
+        author: <span>Dimitri Shostakovich</span>,
+        link: "https://youtu.be/mmCnQDUSO4I?si=0SBRPy1mf0R_6Rp6"
+      },
+      {
+        name: <span>Symphony No. 9, "From the New World"</span>,
+        author: <span>Antonín Dvořák</span>,
+        link: "https://youtu.be/nXZ2zlALj1Y?si=bnDTO1e3zg9IF0Vi"
+      },
+      {
+        name: <span>The Planets</span>,
+        author: <span>Gustav Holst</span>,
+        link: "https://youtu.be/AhFfuLqoiUI?si=gawqMjSn_hZCUsG-"
+      },
+      {
+        name: <span>Scythian Suite, II. The Enemy God and the Dance of the Spirits of Darkness</span>,
+        author: <span>Sergei Prokofiev</span>,
+        link: "https://youtu.be/HtVgWzXGvj4?si=Hgdts34LoQ5j2ibS&t=338"
+      },
+      {
+        name: <span>Symphony No. 3, "Fiery Angel"</span>,
+        author: <span>Sergei Prokofiev</span>,
+        link: "https://youtu.be/f4XLySHvFL4?si=cEjqO9dBmip5-Mvs"
+      },
+      {
+        name: <span>String Quartet No. 4, V. Allegro Molto</span>,
+        author: <span>Béla Bartók</span>,
+        link: "https://youtu.be/nJLb7-m-pAY?si=RRDgMPcH61hghwfe&t=1014"
+      },
+      {
+        name: <span>"Little" Fugue in G Minor, BMV 578</span>,
+        author: <span>Johann Sebastian Bach</span>,
+        link: "https://youtu.be/2fqeVXQ3yE0?si=EMqnWi5jsL26Q1NS"
+      },
+      {
+        name: <span>Marche Slave</span>,
+        author: <span>Pyotr Tchaikovsky</span>,
+        link: "https://youtu.be/XtiivJyL3Ec?si=LyGX95hWNv_uFwQq"
+      },
+      {
+        name: <span>Le tombeau de Couperin</span>,
+        author: <span>Maurice Ravel (orc. Zoltán Kocsis)</span>,
+        link: "https://youtu.be/Goslds-6LCc?si=EARcXdqIVcbpDgBA"
+      },
+      {
+        name: <span>One Winged Angel from <span className="italic">Final Fantasy VII</span></span>,
+        author: <span>Nobuo Uematsu</span>,
+        link: "https://youtu.be/zkZGFNCS6iQ?si=FN2TJEu0eEPlt3Ja"
+      },
+      {
+        name: <span>National Anthem of Azerbaijan</span>,
+        author: <span>Nobuo Uematsu</span>,
+        link: "https://youtu.be/DLaFdEMnyKE?si=4_K5E-VUk9xJ_bTG"
+      },
     ]
   },
   { value: "northWestEurope", title: "Northern & Western Europe",
