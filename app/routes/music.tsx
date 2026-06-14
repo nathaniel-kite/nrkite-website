@@ -350,7 +350,8 @@ export default function Music() {
           ))}
         </Accordion>
         <p className="italic text-muted-foreground">
-          This music does NOT represent my political beliefs, and I do not endorse any movements associated with these songs.
+          This music does not represent my political beliefs. I do not endorse any groups, movements, or ideologies associated
+          with it.
         </p>
       </div>
     </div>
