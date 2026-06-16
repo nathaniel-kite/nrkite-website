@@ -1,12 +1,5 @@
 import type { Route } from "./+types/home";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "~/components/ui/card";
-import { BulldozerIcon } from "@phosphor-icons/react";
+import { Keyboard } from "~/components/interactive-keyboard/keyboard";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -18,20 +11,17 @@ export function meta({}: Route.MetaArgs) {
 export default function Language() {
   return (
     <div className="container mx-auto py-12 px-4 mt-14 max-w-3xl">
-      <Card className="shadow shadow-muted-foreground/10">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <BulldozerIcon weight="bold" className="size-6" />
-            <span className="font-bold">Under Construction</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-secondary-foreground mb-3">
-            In the future, this is where I plan to host my linguistic projects, conlangs, and other resources. Please check back soon!
-          </p>
-          <p className="text-muted-foreground italic">Last updated: 6/14/2026</p>
-        </CardContent>
-      </Card>
+      <h2 className="font-heading text-3xl font-bold mb-4">Conlanging Keyboard</h2>
+      <div className="text-secondary-foreground space-y-4 mb-4">
+        <p>
+          This is the keyboard I use for conlanging. It includes almost all of the IPA, an extensive set of diacritics, and a few
+          additional special characters.
+        </p>
+        <Keyboard/>
+        <p className="italics">
+          Download coming soon.
+        </p>
+      </div>
     </div>
   );
 }

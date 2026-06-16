@@ -1,0 +1,1 @@
+I'm using Cygwin. `pwd` returns the following when used in this directory: `/cygdrive/c/Users/nate/workspace/nrkite-website`

@@ -20,7 +20,7 @@
       "find *": "allow",
       "head *": "allow",
       "tail *": "allow",
-      "ls*": "allow",
+      "ls *": "allow",
       "npx openspec *": "allow",
       "openspec *": "allow"
     },

@@ -62,7 +62,7 @@ const genres = [
       {
         name: <span>Symphony No. 9, "From the New World"</span>,
         author: <span>Antonín Dvořák</span>,
-        link: "https://youtu.be/nXZ2zlALj1Y?si=bnDTO1e3zg9IF0Vi"
+        link: "https://youtu.be/oLWpgWuUaU4?si=xHLLE1q0EOOkZQUI"
       },
       {
         name: <span>The Planets</span>,
@@ -106,7 +106,7 @@ const genres = [
       },
       {
         name: <span>National Anthem of Azerbaijan</span>,
-        author: <span>Nobuo Uematsu</span>,
+        author: <span>Uzeyir Hajibeyov</span>,
         link: "https://youtu.be/DLaFdEMnyKE?si=4_K5E-VUk9xJ_bTG"
       },
     ]
