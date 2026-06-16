@@ -44,7 +44,7 @@ export function KeyboardToggles({
         onClick={onToggleAlt}
         aria-pressed={altActive}
       >
-        Alt
+        AltGr
       </Button>
 
       <Separator orientation="vertical" className="h-6" />

@@ -18,8 +18,8 @@ export default function Language() {
           additional special characters.
         </p>
         <Keyboard/>
-        <p className="italics">
-          Download coming soon.
+        <p className="italic">
+          Download coming soon!
         </p>
       </div>
     </div>
