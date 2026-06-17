@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { Card, CardContent } from "~/components/ui/card";
 import { KEYBOARD_ROWS } from "./key-layout";
-import type { KeyDef } from "./key-layout";
+import type { KeyDef, DeadKeyId } from "./key-layout";
 import { KeyboardRow } from "./keyboard-row";
 import { KeyboardToggles } from "./keyboard-toggles";
 
 export function Keyboard() {
   const [shiftActive, setShiftActive] = useState(false);
   const [altActive, setAltActive] = useState(false);
-  const [deadKeyActive, setDeadKeyActive] = useState<"'" | '"' | '/' | null>(null);
+  const [deadKeyActive, setDeadKeyActive] = useState<DeadKeyId | null>(null);
 
   const toggleShift = () => setShiftActive((v) => !v);
   const toggleAlt = () => setAltActive((v) => !v);
 
   /** Activates a dead key; deactivates if already active (mutual exclusion). */
-  const toggleDeadKey = (key: "'" | '"' | '/') => {
+  const toggleDeadKey = (key: DeadKeyId) => {
     setDeadKeyActive((current) => (current === key ? null : key));
   };
 

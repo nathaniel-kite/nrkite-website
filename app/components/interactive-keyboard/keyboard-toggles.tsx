@@ -2,20 +2,23 @@ import { cn } from "~/lib/utils";
 import { Button } from "~/components/ui/button";
 import { Kbd } from "~/components/ui/kbd";
 import { Separator } from "~/components/ui/separator";
+import { DEAD_KEYS } from "./key-layout";
+import type { DeadKeyId } from "./key-layout";
 
-const DEAD_KEY_LABELS: Record<string, { label: string; char: string }> = {
-  "'": { label: "Diacritics", char: "'" },
-  '"': { label: "Doubled Diacritics", char: '"' },
-  "/": { label: "Slash", char: "/" },
-};
+const DEAD_KEY_ORDER: DeadKeyId[] = [
+  "apostrophe", "quote", "slash",
+  "retroflex", "clicks", "implosives",
+  "laterals", "dorsals", "alveolopalatals",
+  "vowels", "nonIpa",
+];
 
 interface KeyboardTogglesProps {
   shiftActive: boolean;
   altActive: boolean;
-  deadKeyActive: "'" | '"' | '/' | null;
+  deadKeyActive: DeadKeyId | null;
   onToggleShift: () => void;
   onToggleAlt: () => void;
-  onToggleDeadKey: (key: "'" | '"' | '/') => void;
+  onToggleDeadKey: (key: DeadKeyId) => void;
 }
 
 export function KeyboardToggles({
@@ -44,50 +47,55 @@ export function KeyboardToggles({
         onClick={onToggleAlt}
         aria-pressed={altActive}
       >
-        AltGr
+        Alt
       </Button>
 
       <Separator orientation="vertical" className="h-6" />
 
       {/* Dead key toggles */}
-      <Button
-        size="sm"
-        variant="outline"
-        onClick={() => onToggleDeadKey("'")}
-        aria-pressed={deadKeyActive === "'"}
-        className={cn(
-          deadKeyActive === "'" && "bg-dead-key text-white border-dead-key hover:bg-dead-key/90 hover:text-white dark:bg-dead-key dark:border-dead-key dark:hover:bg-dead-key/90 dark:hover:text-white",
-          deadKeyActive !== "'" && "text-dead-key hover:text-dead-key",
-        )}
-      >
-        {DEAD_KEY_LABELS["'"].label} <Kbd className="text-inherit bg-gray-300/30 dark:bg-gray-700/30">{DEAD_KEY_LABELS["'"].char}</Kbd>
-      </Button>
+      {/* Dead keys */}
+      {DEAD_KEY_ORDER.filter(id => DEAD_KEYS[id].type === "dead").map((id) => {
+        const info = DEAD_KEYS[id];
+        const isActive = deadKeyActive === id;
+        return (
+          <Button
+            key={id}
+            size="sm"
+            variant="outline"
+            onClick={() => onToggleDeadKey(id)}
+            aria-pressed={isActive}
+            className={cn(
+              isActive && "bg-dead-key text-white border-dead-key hover:bg-dead-key/90 hover:text-white dark:bg-dead-key dark:border-dead-key dark:hover:bg-dead-key/90 dark:hover:text-white",
+              !isActive && "text-dead-key hover:text-dead-key",
+            )}
+          >
+            {info.label} <Kbd className="text-inherit bg-gray-300/30 dark:bg-gray-700/30">{info.char}</Kbd>
+          </Button>
+        );
+      })}
 
-      <Button
-        size="sm"
-        variant="outline"
-        onClick={() => onToggleDeadKey('"')}
-        aria-pressed={deadKeyActive === '"'}
-        className={cn(
-          deadKeyActive === '"' && "bg-dead-key text-white border-dead-key hover:bg-dead-key/90 hover:text-white dark:bg-dead-key dark:border-dead-key dark:hover:bg-dead-key/90 dark:hover:text-white",
-          deadKeyActive !== '"' && "text-dead-key hover:text-dead-key",
-        )}
-      >
-        {DEAD_KEY_LABELS['"'].label} <Kbd className="text-inherit bg-gray-300/30 dark:bg-gray-700/30">{DEAD_KEY_LABELS['"'].char}</Kbd>
-      </Button>
+      <Separator orientation="vertical" className="h-6" />
 
-      <Button
-        size="sm"
-        variant="outline"
-        onClick={() => onToggleDeadKey('/')}
-        aria-pressed={deadKeyActive === '/'}
-        className={cn(
-          deadKeyActive === '/' && "bg-dead-key text-white border-dead-key hover:bg-dead-key/90 hover:text-white dark:bg-dead-key dark:border-dead-key dark:hover:bg-dead-key/90 dark:hover:text-white",
-          deadKeyActive !== '/' && "text-dead-key hover:text-dead-key",
-        )}
-      >
-        {DEAD_KEY_LABELS["/"].label} <Kbd className="text-inherit bg-gray-300/30 dark:bg-gray-700/30">{DEAD_KEY_LABELS["/"].char}</Kbd>
-      </Button>
+      {/* Extended keys */}
+      {DEAD_KEY_ORDER.filter(id => DEAD_KEYS[id].type === "extended").map((id) => {
+        const info = DEAD_KEYS[id];
+        const isActive = deadKeyActive === id;
+        return (
+          <Button
+            key={id}
+            size="sm"
+            variant="outline"
+            onClick={() => onToggleDeadKey(id)}
+            aria-pressed={isActive}
+            className={cn(
+              isActive && "bg-ext-key text-white border-ext-key hover:bg-ext-key/90 hover:text-white dark:bg-ext-key dark:border-ext-key dark:hover:bg-ext-key/90 dark:hover:text-white",
+              !isActive && "text-ext-key hover:text-ext-key",
+            )}
+          >
+            {info.label} <Kbd className="text-inherit bg-gray-300/30 dark:bg-gray-700/30">{info.char}</Kbd>
+          </Button>
+        );
+      })}
     </div>
   );
 }

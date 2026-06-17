@@ -1,13 +1,14 @@
-import type { KeyDef } from "./key-layout";
+import type { KeyDef, DeadKeyId } from "./key-layout";
+import { DEAD_KEYS } from "./key-layout";
 import { KeyboardKey } from "./keyboard-key";
 
 interface KeyboardRowProps {
   keys: KeyDef[];
   shiftActive: boolean;
   altActive: boolean;
-  deadKeyActive: "'" | '"' | '/' | null;
+  deadKeyActive: DeadKeyId | null;
   onKeyClick: (key: KeyDef) => void;
-  onDeadKeyToggle: (deadKey: "'" | '"' | '/') => void;
+  onDeadKeyToggle: (deadKey: DeadKeyId) => void;
 }
 
 /**
@@ -15,7 +16,7 @@ interface KeyboardRowProps {
  * Modifier keys always show their base label regardless of any modifier state.
  *
  * Priority:
- *   1. Dead key active → use the appropriate dia* / dblDia* / slash* field ('' if undefined)
+ *   1. Dead key active → use the appropriate deadKeyOutputs ('' if undefined)
  *   2. Shift+Alt → shiftAlt layer
  *   3. Alt → alt layer
  *   4. Shift → shift layer
@@ -25,29 +26,19 @@ function getDisplayChar(
   key: KeyDef,
   shiftActive: boolean,
   altActive: boolean,
-  deadKeyActive: "'" | '"' | '/' | null,
+  deadKeyActive: DeadKeyId | null,
 ): string {
   if (key.isModifier) return key.base;
 
-  if (deadKeyActive === "'") {
-    if (shiftActive && altActive) return key.diaSftAlt ?? "";
-    if (altActive)               return key.diaAlt    ?? "";
-    if (shiftActive)             return key.diaSft     ?? "";
-    return key.diacritic ?? "";
-  }
-
-  if (deadKeyActive === '"') {
-    if (shiftActive && altActive) return key.dblDiaSftAlt ?? "";
-    if (altActive)               return key.dblDiaAlt    ?? "";
-    if (shiftActive)             return key.dblDiaSft     ?? "";
-    return key.dblDiacritic ?? "";
-  }
-
-  if (deadKeyActive === '/') {
-    if (shiftActive && altActive) return key.slashShiftAlt ?? "";
-    if (altActive)               return key.slashAlt      ?? "";
-    if (shiftActive)             return key.slashShift     ?? "";
-    return key.slash ?? "";
+  if (deadKeyActive) {
+    const outputs = key.deadKeyOutputs?.[deadKeyActive];
+    if (outputs) {
+      if (shiftActive && altActive) return outputs.shiftAlt ?? "";
+      if (altActive)               return outputs.alt      ?? "";
+      if (shiftActive)             return outputs.shift    ?? "";
+      return outputs.base ?? "";
+    }
+    return "";
   }
 
   if (shiftActive && altActive) return key.shiftAlt ?? key.base;
@@ -57,20 +48,29 @@ function getDisplayChar(
 }
 
 /**
- * Returns the dead key char this key represents when no dead key is active.
+ * Returns the dead key ID this key represents when no dead key is active.
  * Returns null if this key is not a dead key or a dead key is already active.
  */
-function getDeadKeyChar(
+function getDeadKeyId(
   key: KeyDef,
   shiftActive: boolean,
   altActive: boolean,
-  deadKeyActive: "'" | '"' | '/' | null,
-): "'" | '"' | '/' | null {
+  deadKeyActive: DeadKeyId | null,
+): DeadKeyId | null {
   if (!key.isDeadKey || deadKeyActive !== null) return null;
-  if (shiftActive && altActive) return key.shiftAlt === "'" ? "'" : key.shiftAlt === '"' ? '"' : key.shiftAlt === '/' ? '/' : null;
-  if (altActive)               return key.alt === "'" ? "'" : key.alt === '"' ? '"' : key.alt === '/' ? '/' : null;
-  if (shiftActive)             return key.shift === "'" ? "'" : key.shift === '"' ? '"' : key.shift === '/' ? '/' : null;
-  return key.base === "'" ? "'" : key.base === '"' ? '"' : key.base === '/' ? '/' : null;
+
+  // Determine which character this key is currently showing
+  let char: string | undefined;
+  if (shiftActive && altActive) char = key.shiftAlt;
+  else if (altActive)           char = key.alt;
+  else if (shiftActive)         char = key.shift;
+  else                          char = key.base;
+
+  // Look up which dead key ID matches this character
+  for (const [id, info] of Object.entries(DEAD_KEYS)) {
+    if (char === info.char) return id as DeadKeyId;
+  }
+  return null;
 }
 
 export function KeyboardRow({
@@ -85,8 +85,8 @@ export function KeyboardRow({
     <div className="flex gap-1">
       {keys.map((key) => {
         const displayChar = getDisplayChar(key, shiftActive, altActive, deadKeyActive);
-        const deadKeyChar = getDeadKeyChar(key, shiftActive, altActive, deadKeyActive);
-        const isDeadKeyDisplay = deadKeyChar !== null;
+        const deadKeyId = getDeadKeyId(key, shiftActive, altActive, deadKeyActive);
+        const isDeadKeyDisplay = deadKeyId !== null;
 
         return (
           <KeyboardKey
@@ -94,7 +94,7 @@ export function KeyboardRow({
             keyDef={key}
             displayChar={displayChar}
             isDeadKeyDisplay={isDeadKeyDisplay}
-            deadKeyChar={deadKeyChar}
+            deadKeyId={deadKeyId}
             deadKeyActive={deadKeyActive}
             shiftActive={shiftActive}
             altActive={altActive}
