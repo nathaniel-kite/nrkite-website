@@ -175,7 +175,7 @@ export const KEYBOARD_ROWS: KeyDef[][] = [
       alveolopalatals: { base: "ȡ" }
     }},
     { code: "KeyF",      base: "f",  shift: "F", alt: "ɸ", shiftAlt: "ⱱ", flexGrow: 1, deadKeyOutputs: {
-      apostrophe: { base: "n̼", shift: "ᶲ", alt: "ᶲ" },
+      apostrophe: { base: "n̼", shift: "ᶠ", alt: "ᶲ" },
     }},
     { code: "KeyG",      base: "g",  shift: "G", alt: "ɣ", shiftAlt: "ɢ", flexGrow: 1, deadKeyOutputs: {
       apostrophe: { base: "ᶢ", alt: "ˠ" },
