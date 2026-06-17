@@ -29,7 +29,7 @@ export const DEAD_KEYS: Record<DeadKeyId, { label: string; char: string; type: "
   dorsals:         { label: "Dorsals",           char: "ʡ", type: "extended" },
   alveolopalatals: { label: "Alveolopalatals",   char: "ȵ", type: "extended" },
   vowels:          { label: "Vowels",            char: "ǝ", type: "extended" },
-  nonIpa:          { label: "Non-IPA",           char: "þ", type: "extended" },
+  nonIpa:          { label: "Other",           char: "þ", type: "extended" },
 };
 
 export interface KeyDef {
