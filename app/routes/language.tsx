@@ -26,6 +26,9 @@ export default function Language() {
           My conlanging keyboard includes almost all of the IPA, an extensive set of diacritics, and a few
           additional special characters. It doesn't require memorizing Unicode, and it works natively on Windows without additional software.
         </p>
+        <p>
+          You can click
+        </p>
         <Keyboard/>
         <h3 className="font-heading text-2xl font-semibold mt-4 text-foreground">Layout</h3>
         <p>

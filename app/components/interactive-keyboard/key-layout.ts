@@ -76,10 +76,14 @@ export const KEYBOARD_ROWS: KeyDef[][] = [
     }},
     { code: "Digit1",     base: "1",  shift: "!", alt: "¡", shiftAlt: "˥", flexGrow: 1 },
     { code: "Digit2",     base: "2",  shift: "@", alt: "ɻ", shiftAlt: "˦", flexGrow: 1, isDeadKey: true },
-    { code: "Digit3",     base: "3",  shift: "#", alt: "!", shiftAlt: "˧", flexGrow: 1, isDeadKey: true },
+    { code: "Digit3",     base: "3",  shift: "#", alt: "!", shiftAlt: "˧", flexGrow: 1, isDeadKey: true, deadKeyOutputs: {
+      apostrophe: { shift: "s̻"}
+    }},
     { code: "Digit4",     base: "4",  shift: "$", alt: "ɓ", shiftAlt: "˨", flexGrow: 1, isDeadKey: true },
     { code: "Digit5",     base: "5",  shift: "%", alt: "ʟ", shiftAlt: "˩", flexGrow: 1, isDeadKey: true },
-    { code: "Digit6",     base: "6",  shift: "^", alt: "ʡ", shiftAlt: PH, flexGrow: 1, isDeadKey: true },
+    { code: "Digit6",     base: "6",  shift: "^", alt: "ʡ", shiftAlt: PH, flexGrow: 1, isDeadKey: true, deadKeyOutputs: {
+      apostrophe: { shift: "â"}
+    }},
     { code: "Digit7",     base: "7",  shift: "&", alt: "ȵ", shiftAlt: PH, flexGrow: 1, isDeadKey: true },
     { code: "Digit8",     base: "8",  shift: "*", alt: "ǝ", shiftAlt: PH, flexGrow: 1, isDeadKey: true },
     { code: "Digit9",     base: "9",  shift: "(", alt: "þ", shiftAlt: "⸨", flexGrow: 1, isDeadKey: true },
@@ -251,7 +255,7 @@ export const KEYBOARD_ROWS: KeyDef[][] = [
       apostrophe: { base: "ᵐ", shift: "ᶯ", alt: "ᶬ", shiftAlt: "ᶰ" },
     }},
     { code: "Comma",      base: ",",  shift: "<", alt: "⟨", shiftAlt: "«", flexGrow: 1, deadKeyOutputs: {
-      apostrophe: { base: "ț", shift: "̘n", alt: "v̝" },
+      apostrophe: { base: "ț", shift: "n̘", alt: "v̝" },
     }},
     { code: "Period",     base: ".",  shift: ">", alt: "⟩", shiftAlt: "»", flexGrow: 1, deadKeyOutputs: {
       apostrophe: { base: "ṇ", shift: "n̙", alt: "l̞" },

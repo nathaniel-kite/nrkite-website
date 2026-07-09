@@ -124,13 +124,13 @@ const genres = [
         name: <span>På Dovrefjell</span>,
         author: <span>Traditional; Arve Moen Bergset</span>,
         link: "https://youtu.be/TdSDLzuhviE?si=xbuJOo6kPlYLjMqC",
-        tradition: "Norweigian"
+        tradition: "Norwegian"
       },
       {
         name: <span>Eirik Jarl</span>,
         author: <span>Harold Floss</span>,
         link: "https://youtu.be/WQ3C-1C5XuU?si=Ox_Gky13ZxjLSdbX",
-        tradition: "Norweigian"
+        tradition: "Norwegian"
       },
       {
         name: <span>The Butterfly</span>,
