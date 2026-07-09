@@ -65,7 +65,7 @@ export function Keyboard() {
         />
         <Accordion type="single" collapsible className="w-full border-t mt-4">
           <AccordionItem value="basic-functionality">
-            <AccordionTrigger>Basic Functionality</AccordionTrigger>
+            <AccordionTrigger>How to use this keyboard</AccordionTrigger>
             <AccordionContent className="space-y-4 text-secondary-foreground">
               <p>
                 This keyboard uses dead keys, AltGr, and combining diacritics.

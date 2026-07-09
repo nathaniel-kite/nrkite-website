@@ -1,12 +1,6 @@
 import { Kbd } from "~/components/ui/kbd";
 import { Button } from "~/components/ui/button";
 import { DownloadSimpleIcon } from "@phosphor-icons/react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "~/components/ui/accordion";
 import type { Route } from "./+types/home";
 import { Keyboard } from "~/components/interactive-keyboard/keyboard";
 
